@@ -1,0 +1,55 @@
+.containerInput{
+    border: black 1px solid;
+    text-align: left;
+  /*  background-color: #77611c;*/
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    margin: 20px;
+
+}
+.gg{
+    cursor: pointer;
+}
+.gg1 {
+    margin: 5px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 100;
+    background-color: white;
+    width: 55%;
+}
+
+.containerName {
+
+    margin-top: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.gg1  {
+
+
+
+    cursor: pointer;
+}
+.gg1 :after {
+    background-color: #0c0c0c;
+    display: block;
+
+
+    width: 0%;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+.gg1 :hover:after,
+.gg1 :focus:after {
+    width: 45%;
+}
