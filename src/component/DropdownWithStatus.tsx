@@ -4,7 +4,7 @@ import styles from './inputStyle.module.css'
 
 export const DropdownWithStatus = ({status}: any) => {
 
-    let [value, setValue] = useState('')
+    let [value1, setValue1] = useState('')
     let [list, setList] = useState(false)
 
 
