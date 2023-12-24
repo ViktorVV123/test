@@ -1,7 +1,40 @@
-import {useEffect, useRef, useState} from "react"
+import React, {FocusEvent, useEffect, useRef, useState} from "react"
 import styles from './inputStyle.module.css'
 
 
+export const DropdownWithSearch = ({options}: any) => {
+
+    let [value, setValue] = useState('')
+    let [list, setList] = useState(false)
+
+
+    const onChangeHandler = (event: any) => {
+        setValue(event.target.value)
+    }
+    const onClickHandler = () => {
+        setList(true)
+    }
+
+    console.log(onClickHandler)
+    const onblurHandler = (event: FocusEvent<HTMLInputElement>) => {
+        setList(false)
+    }
+
+    return (
+        <div>
+            <input className={styles.containerList} value={value} onChange={onChangeHandler} onClick={onClickHandler}
+                   placeholder={options[0]} onBlur={onblurHandler}/>
+            <div className={styles.containerCollapse}> {list && options.map((e: any) => {
+                return (
+                    <div>{e}</div>
+                )
+            })}</div>
+        </div>
+    );
+};
+
+
+/*
 export const DropdownWithSearch = ({options}: any) => {
 
     let [value, setValue] = useState('')
@@ -34,7 +67,7 @@ export const DropdownWithSearch = ({options}: any) => {
     }
     const filteredOptions = options
         .filter((option: any) => option.toLowerCase().includes(value.toLowerCase()));
-      /*  .slice(options можно указать какое колличесво показать 0.5);*/
+      /!*  .slice(options можно указать какое колличесво показать 0.5);*!/
 
     return (
         <div>
@@ -55,3 +88,4 @@ export const DropdownWithSearch = ({options}: any) => {
         </div>
     );
 };
+*/

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import './App.css';
 import {CardAll} from "./component/cardAll";
@@ -15,16 +15,29 @@ function App() {
         "Шесть",
         "Семь",
     ];
-    const status = [
-        "half",
+    const data = [
+         "half",
         "finish",
-        "empty",
+         "empty",
     ];
 
+    const display =[
+
+        {id:1, name:'internal (frame)'},
+        {id:2,name:'external (window.open)'},
+        {id:3,name:'file'},
+    ]
+/*
+    const filtertest = (id:number)=>{
+        let select = display.find(e => e.id === id)
+        setValues(select)
+    }
+*/
 
     return (
         <div className="App">
-            <CardAll options={options} status={status} />
+            <CardAll data={data}/>
+
         </div>
     );
 }

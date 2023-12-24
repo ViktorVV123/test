@@ -10,10 +10,10 @@
     margin: 20px;
 
 }
-.gg{
+.containerList{
     cursor: pointer;
 }
-.gg1 {
+.containerCollapse {
     margin: 5px;
     cursor: pointer;
     position: absolute;

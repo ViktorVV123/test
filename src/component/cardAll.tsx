@@ -1,10 +1,22 @@
 import React from 'react';
 import {DropdownWithSearch} from "./DropdownWithSearch";
-
 import styles from './inputStyle.module.css'
 import {TextInput} from "./textInput";
+import {DropdownWithStatus} from "./DropdownWithStatus";
+import {MultiSelectInput} from "./choiseSystemStart";
 
-export const CardAll = ({options,options1}:any) => {
+
+
+type dispalyType={
+    id:number,
+    name:string
+}
+type dispalyAllType ={
+    display:Array<dispalyType>
+
+}
+
+export const CardAll = ( {data}:any) => {
     return (
         <div className={styles.containerInput}>
            <div >
@@ -56,13 +68,13 @@ export const CardAll = ({options,options1}:any) => {
 
                <div className={styles.containerName}>
                    <div>status:</div>
-                   <div><DropdownWithSearch options={options}/></div>
+                   <div><TextInput/></div>
                </div>
 
 
                <div className={styles.containerName}>
                    <div>display:</div>
-                   <div><DropdownWithSearch options={options}/></div>
+                   <div><MultiSelectInput data={data}  /></div>
                </div>
 
                <div className={styles.containerName}>
@@ -72,7 +84,7 @@ export const CardAll = ({options,options1}:any) => {
 
                <div className={styles.containerName}>
                    <div>kind:</div>
-                   <div><DropdownWithSearch options={options}/></div>
+                   <div><TextInput/></div>
                </div>
 
                <div className={styles.containerName}>
@@ -87,7 +99,7 @@ export const CardAll = ({options,options1}:any) => {
 
                <div className={styles.containerName}>
                    <div>favorites:</div>
-                   <div><DropdownWithSearch options={options}/></div>
+                   <div><TextInput/></div>
                </div>
 
                <div className={styles.containerName}>
